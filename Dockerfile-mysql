@@ -1,0 +1,6 @@
+FROM mysql:8.0
+COPY my.cnf /etc/mysql/my.cnf  
+RUN mkdir -p /var/lib/mysql/data
+VOLUME ["/var/lib/mysql/data"] 
+EXPOSE 3306
+CMD ["mysqld"]
